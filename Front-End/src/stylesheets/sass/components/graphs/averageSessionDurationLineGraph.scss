@@ -1,0 +1,19 @@
+.averageSessionDurationLineGraph {
+    @include box($width: 100%, $bgcolor: #FF0000, $position: relative, $padding: 10px 0);
+
+    .lineChart-tooltip {
+        @include box($width: 39px, $height: 25px, $bgcolor: white, $placecontent: center);
+    }
+
+    .titre {
+        @include box($width: 148px, $color: #FFFFFF, $top: 29px, $left: 2.7%);
+    }
+
+    .recharts-tooltip-wrapper{
+        @include box($fontsize: 7, $color: black, $textalign: center);
+
+        p{
+            @include box($height: 100%, $placecontent: center);
+        }
+    }
+}

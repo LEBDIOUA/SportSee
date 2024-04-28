@@ -1,0 +1,20 @@
+@import "./abstracts/fonctions.scss";
+@import "./abstracts/mixins.scss";
+@import "./base/base.scss";
+@import "./base/reset.scss";
+
+@import "./components/AchievementMsg.scss";
+@import "./components/graphs.scss";
+@import "./components/nutritionalInfoCard.scss";
+
+@import "./components/graphs/dailyActivityBarGraph.scss";
+@import "./components/graphs/averageSessionDurationLineGraph.scss";
+@import "./components/graphs/activityTypeRadarGraph.scss";
+@import "./components/graphs/scoreRadialGraph.scss";
+
+@import "./layouts/header.scss";
+@import "./layouts/dashboard.scss";
+@import "./layouts/verticalMenu.scss";
+
+@import "./pages/error.scss";
+@import "./pages/loading.scss";

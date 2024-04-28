@@ -1,0 +1,4 @@
+.dashboard {
+    @include box($display: flex, $direction: column, $gap: 60px, $padding: 50px 6%);
+    @include childgrid($rowstart: 2, $rowend: 4);
+}

@@ -1,0 +1,32 @@
+.dailyActivityBarGraph {
+    @include box($width: 100%, $height: 100%, $display: flex, $direction: row, $bgcolor: #FBFBFB, $position: relative, $padding: 20px 20px 40px 20px);
+    @include childgrid($columnstart: 1, $columnend: 4, $rowstart: 1, $rowend: 2);
+
+    .recharts-tooltip-wrapper {
+        transform: translate(125px, 0px);
+        margin: -50px 0px 0px 50px;
+        @include police($fontsize: 7, $color: white);
+    }
+
+    .recharts-legend-wrapper {
+        @include box($top: 0 !important, $right: -10px !important);
+    }
+
+    .barChart-tooltip {
+        @include box($width: 39px, $height: 63px, $display: flex, $direction: column, $bgcolor: #E60000, $justifycontent: space-around, $textalign: center);
+    }
+
+    .recharts-legend-item-text {
+        @include police($fontsize: 14, $fontweight: 500, $color: #74798C);
+    }
+
+    .recharts-cartesian-grid {
+        @include box($paddingleft: 100px);
+    }
+
+    .recharts-cartesian-grid-horizontal line:first-child {
+        stroke: #DEDEDE;
+        stroke-width: 1px;
+        stroke-dasharray: 0;
+    }
+}

@@ -1,0 +1,16 @@
+.presentation {
+    @include box($display: flex, $direction: column, $gap: 15px, $textalign: left);
+
+    .titre {
+        @include police($fontsize: 48, $fontweight: 500);
+    }
+
+    #nom {
+        @include police($color: #FF0101);
+    }
+
+    #texte {
+        @include police($fontsize: 18);
+
+    }
+}

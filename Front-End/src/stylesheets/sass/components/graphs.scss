@@ -1,0 +1,11 @@
+.graphsInfos {
+    @include box($display: flex, $direction: row, $gap: 20px);
+
+    .graphs {
+        @include box($display: grid, $templaterows: 300px 280px, $templatecolumns: repeat(3, 1fr), $rowgap: 6%, $columngap: 4%, $flexgrow: 1);
+
+        .graph {
+            @include box($radius: 10px);
+        }
+    }
+}

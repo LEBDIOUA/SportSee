@@ -1,0 +1,32 @@
+.scoreRadialGraph {
+    @include box($display: flex, $bgcolor: #FBFBFB, $position: relative, $padding: 12px 0px);
+
+    .titre {
+        @include box($top: 1.66%, $left: 11.4%);
+    }
+
+    #label {
+        @include box($top: 50%, $left: 50%, $position: absolute, $textalign: -webkit-center);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    #score {
+        @include police($fontsize: 26, $fontweight: 700, $color: #282D30);
+    }
+
+    #texte {
+        @include police($fontsize: 16, $color: #74798C);
+        width: 95px;
+    }
+
+    .recharts-wrapper {
+        @include box($display: flex, $justifycontent: center, $alignitems: center, $top: 50%, $left: 50%, $position: absolute);
+        transform: translate(-50%, -50%);
+    }
+
+    // .recharts-responsive-container{
+    //     @include box($display: flex, $justifycontent: center, $alignitems: center, $top: 50%, $left: 50%, $position: absolute);
+    //     transform: translate(-50%, -50%);
+    // }
+}

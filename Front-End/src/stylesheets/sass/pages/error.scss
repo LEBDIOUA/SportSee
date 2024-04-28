@@ -1,0 +1,15 @@
+.error{
+    @include box($display: flex, $direction: column, $gap: 15px, $textalign: center, $justifycontent: center);
+
+    h1{
+        @include police($fontsize: 150, $color: #FF0101);
+    }
+
+    h2{
+        @include police($fontsize: 50, $color: #FF0101);
+    }
+
+    h3{
+        @include police($fontsize: 24);
+    }
+}

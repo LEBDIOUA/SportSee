@@ -1,0 +1,37 @@
+.loading {
+    @include box($display: flex, $direction: row, $gap: 5px, $alignitems: center, $justifycontent: center);
+
+
+    p {
+        @include police($fontsize: 18, $fontweight: 500);
+    }
+
+    .cercle {
+        @include box($width: 10px, $height: 10px, $radius: 5px);
+
+        &:nth-of-type(1) {
+            background-color: #FF0101;
+            animation: clignoter .5s linear infinite;
+        }
+
+        &:nth-of-type(2) {
+            background-color: #FF0101;
+            animation: clignoter .5s .5s linear infinite;
+        }
+
+        &:nth-of-type(3) {
+            background-color: #FF0101;
+            animation: clignoter 1s .5s linear infinite;
+        }
+    }
+}
+
+@keyframes clignoter {
+    from {
+        background-color: #FF0101;
+    }
+
+    to {
+        background-color: white;
+    }
+}

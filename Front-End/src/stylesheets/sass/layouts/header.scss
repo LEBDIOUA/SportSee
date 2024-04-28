@@ -1,0 +1,24 @@
+header {
+    @include box($display: flex, $direction: row, $gap: 120px, $bgcolor: black, $alignitems: center);
+    @include childgrid($columnstart: 1, $columnend: 3);
+
+    .logoHeader {
+        @include box($display: flex, $direction: row, $gap: 5px, $alignitems: center, $paddingleft: 28px);
+
+        .logoImg {
+            @include box($width: 57.2px, $height: 57.7px);
+        }
+
+        .logoTxt {
+            @include box($width: 109.3px, $height: 24.29px);
+        }
+    }
+
+    .horizentalMenu {
+        @include box($display: flex, $direction: row, $flexgrow: 1, $justifycontent: space-around);
+
+        a {
+            @include police($fontsize: 24, $fontweight: 500, $color: #FFFFFF);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+aside {
+    @include box($display: flex, $direction: column, $gap: 15%, $bgcolor: black, $justifycontent: space-around, $alignitems: center, $position: relative, $padding: 100% 26px);
+    @include childgrid($rowstart: 2, $rowend: 3);
+
+    .verticalMenu {
+        @include box($display: flex, $direction: column, $gap: 10px);
+
+        .logoMenu {
+            @include box($width: 64px, $height: 64px, $radius: 6px);
+        }
+    }
+
+    p {
+        @include police($fontsize: 12, $fontweight: 500, $color: #FFFFFF);
+        transform: rotate(-90deg);
+        text-wrap: nowrap;
+    }
+}
