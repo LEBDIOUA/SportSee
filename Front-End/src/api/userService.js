@@ -21,7 +21,6 @@ const renderDataAPI = async (id) => {
       const responseAPI = await fetch(links[cpt]);
       // Si la réponse n'est pas OK, enregistre un msg d'erreur avec responseAPI.status qui fournit le code de statut HTTP de la réponse.
       if (!responseAPI.ok) {
-        console.log("test")
         throw new Error(`Erreur lors de la récupération des données de l'API : ${responseAPI.status}`);
       }
       else {
