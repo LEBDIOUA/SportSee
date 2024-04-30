@@ -6,10 +6,9 @@ function ScoreRadialGraph({ score }) {
         data.push({ value: score, fill: '#E60000' });
 
         const renderRadialBarChart = (
-
             <RadialBarChart width={164} height={164} data={data} barSize={10} innerRadius="100%" outerRadius="100%" startAngle={90} endAngle={450} >
                 <PolarAngleAxis type="number" domain={[0, 100]} tick={false} />
-                <RadialBar fill="fill" dataKey="value" cornerRadius={100} innerRadius="90%" outerRadius="100%" />
+                <RadialBar fill="fill" dataKey="value" cornerRadius={100} />
                 <circle cx="50%" cy="50%" fill="white" r="43.5%" />
             </RadialBarChart>
         );
@@ -26,7 +25,11 @@ function ScoreRadialGraph({ score }) {
         );
     }
     else {
-        return <p>Error</p>
+        return (
+            <article className='graph scoreRadialGraph error'>
+                ERROR !!
+            </article>
+        );
     }
 
 }

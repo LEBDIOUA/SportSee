@@ -17,12 +17,16 @@ const renderDataAPI = async (id) => {
   let apiUserFound = false;
   try {
     do {
+      // Cette ligne envoie une requête HTTP GET vers l'URL et attend la réponse
       const responseAPI = await fetch(links[cpt]);
+      // Si la réponse n'est pas OK, enregistre un msg d'erreur avec responseAPI.status qui fournit le code de statut HTTP de la réponse.
       if (!responseAPI.ok) {
-        errs.push(`Erreur lors de la récupération des données de l'API : ${responseAPI.status}`);
+        console.log("test")
+        throw new Error(`Erreur lors de la récupération des données de l'API : ${responseAPI.status}`);
       }
-      const responseData = await responseAPI.json();
-      if (responseData) {
+      else {
+        // Si la réponse est OK, cette ligne convertit la réponse HTTP en format JSON
+        const responseData = await responseAPI.json();
         apiData.push(responseData.data);
         apiUserFound = true;
         cpt++;
@@ -48,9 +52,12 @@ const renderDataJS = async (id) => {
       jsonData.push(JSFile.USER_AVERAGE_SESSIONS.find(userData => userData.userId === id))
       jsonData.push(JSFile.USER_PERFORMANCE.find(userData => userData.userId === id))
     }
+    else{
+      throw new Error('Erreur lors de la récupération des données du fichier JS')
+    }
   }
   catch (error) {
-    jsonErr = 'Erreur lors de la récupération des données du fichier JS';
+    jsonErr = error;
     errs.push(jsonErr);
   }
   return { jsonData, jsonErr, jsonUserFound };

@@ -203,6 +203,9 @@ img {
   background-color: #282D30;
   padding: 12px 3px;
 }
+.activityTypeRadarGraph.error {
+  color: white;
+}
 
 .scoreRadialGraph {
   background-color: #FBFBFB;

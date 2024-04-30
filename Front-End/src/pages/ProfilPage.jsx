@@ -12,8 +12,6 @@ function ProfilPage() {
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState();
 
-    console.log(id)
-
     useEffect(() => {
         const data = async () => {
             try {

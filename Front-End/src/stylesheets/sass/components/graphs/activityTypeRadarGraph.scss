@@ -1,3 +1,7 @@
 .activityTypeRadarGraph{
     @include box($bgcolor: #282D30, $padding: 12px 3px);
+
+    &.error{
+        @include police($color: white);
+    }
 }

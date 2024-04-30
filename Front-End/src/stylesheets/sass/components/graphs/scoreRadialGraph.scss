@@ -24,9 +24,4 @@
         @include box($display: flex, $justifycontent: center, $alignitems: center, $top: 50%, $left: 50%, $position: absolute);
         transform: translate(-50%, -50%);
     }
-
-    // .recharts-responsive-container{
-    //     @include box($display: flex, $justifycontent: center, $alignitems: center, $top: 50%, $left: 50%, $position: absolute);
-    //     transform: translate(-50%, -50%);
-    // }
 }

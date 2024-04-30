@@ -7,21 +7,6 @@ function ActivityTypeRadarGraph({ kinds }) {
             data.unshift({ id: kind.kind, title: kind.title, value: kind.value })
         })
 
-        const minVal = data.reduce((val, kind) => {
-            if (!val || kind.value < val) {
-                return kind.value;
-            } else {
-                return val;
-            }
-        }, null);
-
-        const maxVal = data.reduce((val, kind) => {
-            if (!val || kind.value > val) {
-                return kind.value;
-            } else {
-                return val;
-            }
-        }, null);
         const formatterTick = (value) => {
             const tick = (() => {
                 switch (value) {
@@ -59,7 +44,11 @@ function ActivityTypeRadarGraph({ kinds }) {
         );
     }
     else {
-        return <p>Error</p>
+        return (
+            <article className='graph activityTypeRadarGraph error'>
+                ERROR !!
+            </article>
+        );
     }
 
 }

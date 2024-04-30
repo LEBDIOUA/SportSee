@@ -81,13 +81,13 @@ Au niveau de la structure globale, j'ai maintenu un fichier principal, **index.h
 
 Dans App.jsx, j'ai intégré des composants globaux tels que le **header** et le **menu horizontal**, qui sont présents sur toutes les pages. De plus, j'ai utilisé **_<BrowserRouter>_** et **_<Routes>_** pour gérer la navigation entre les différentes pages de manière efficace. Ainsi, chaque page spécifique se concentre uniquement sur son* contenu unique*, tandis que les _éléments communs_ sont _réutilisés_ de manière transparente à travers toute l'application.
 
-![Architecture Generale](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/ArchitectureGenerale.png)
+![Architecture Generale](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/ArchitectureGenerale.png)
 
-![Architecture Dashboard](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/ArchitectureDashboard.png)
+![Architecture Dashboard](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/ArchitectureDashboard.png)
 
 ## La récupération des données
 
-![Récupération de données](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/RecuperationDonnes.png)
+![Récupération de données](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/RecuperationDonnes.png)
 
 Avant de récupérer les données j’ai déclaré une variable user initialisé à null et une variable USE_API qui aide à choisir la méthode de récupération de données entre le service API et le fichier JSON. Comme elle est initialisée à true, la récupération des données sera faite par le service API.
 La méthode renderDataAPI gère de la récupération de données, renvoyant apiData, pour les données, apiErr en cas d’erreur interrompant la récupération et apiUserFound pour confirmer l’existence de données à récupérer. Si aucune erreur n’est survenue et que les données ont été récupérées avec succès , j’instancie l’objet User. En cas d’erreur, aucune instanciation de l’objet n’a lieu.
@@ -98,25 +98,25 @@ Si l’on choisit de récupérer les données directement du fichier JSON, il su
 
 ### Graphique à Barres - DailyActivityBarGraph -
 
-![Graphique à barres](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/BarGraph.png)
+![Graphique à barres](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/BarGraph.png)
 
 Ce graphique est destiné à afficher l'activité quotidienne. Il montre les informations relatives au poids et aux calories brûlées. L’axe des abscisses correspond aux jours du mois courant. Un tooltip apparaît au survol.
 
 ### Graphique Linéaire - AverageSessionDurationLineGraph -
 
-![Graphique linéaire](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/LineGraph.png)
+![Graphique linéaire](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/LineGraph.png)
 
 Ce graphique est destiné à afficher la durée moyenne des sessions. L’axe des abscisses correspond à la durée moyenne des sessions. Un tooltip apparaît au survol.
 
 ### Graphique Radar - ActivityTypeRadarGraph -
 
-![Graphique radar](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/RadarGraph.png)
+![Graphique radar](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/RadarGraph.png)
 
 Ce graphique est destiné à afficher les types d’activités réalisées.
 
 ### Graphique à Barres Radiales - ScoreRadialGraph -
 
-![Graphique à barres radiales](https://github.com/LEBDIOUA/SportSee/blob/main/front-end/public/RadialGraph.png)
+![Graphique à barres radiales](https://github.com/LEBDIOUA/SportSee/blob/main/Front-End/public/RadialGraph.png)
 
 Ce graphique est destiné à afficher le score moyen.
 
@@ -134,7 +134,7 @@ Ce projet comprend quatre points de terminaison qu'on peut utiliser :
 
 - http://localhost:3000/user/${userId}/activity - récupère l'activité d'un utilisateur jour après jour avec les kilogrammes et les calories.
 
--http://localhost:3000/user/${userId}/average-sessions - récupère les sessions moyennes d'un utilisateur par jour. La semaine commence le lundi.
+- http://localhost:3000/user/${userId}/average-sessions - récupère les sessions moyennes d'un utilisateur par jour. La semaine commence le lundi.
 
 - http://localhost:3000/user/${userId}/performance - récupère les performances d'un utilisateur (énergie, endurance, etc.).
 

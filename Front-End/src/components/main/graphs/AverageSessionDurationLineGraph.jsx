@@ -56,7 +56,11 @@ function AverageSessionDurationLineGraph({ sessions }) {
         );
     }
     else {
-        return <p>Error</p>
+        return (
+            <article className='graph averageSessionDurationLineGraph error'>
+                ERROR !!
+            </article>
+        );
     }
 
 }
